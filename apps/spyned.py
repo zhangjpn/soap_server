@@ -5,8 +5,6 @@ from spyne.application import Application
 from spyne.decorator import rpc
 from spyne.model.complex import Iterable
 from spyne.model.primitive import Integer, Unicode
-from spyne.protocol.http import HttpRpc
-from spyne.protocol.json import JsonDocument
 from spyne.protocol.soap import Soap11
 from spyne.service import ServiceBase
 
@@ -16,7 +14,7 @@ class HelloWorldService(ServiceBase):
     def hello(ctx, name, times):
         name = name or ctx.udc.config['HELLO']
         for i in range(times):
-            yield u'Hello, %s' % name
+            yield 'Hello, %s' % name
 
 
 class UserDefinedContext(object):
