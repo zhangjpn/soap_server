@@ -11,4 +11,4 @@ def init_views(app):
             'status': 'ok',
         }
 
-        return jsonify(**data)
+        return jsonify(data), 200

@@ -1,10 +1,10 @@
-#-*- coding:utf-8 -*-
+# -*-coding:utf-8 -*-
 
 from werkzeug.wsgi import DispatcherMiddleware
 from spyne.server.wsgi import WsgiApplication
 
-from app import spyned
-from app.flasked import app
+from apps import spyned
+from apps.flasked import app
 
 
 # SOAP services are distinct wsgi applications, we should use dispatcher
